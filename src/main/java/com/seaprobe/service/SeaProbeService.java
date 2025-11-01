@@ -48,7 +48,6 @@ public class SeaProbeService {
                 case "L" -> direction = LEFT.get(direction);
                 case "R" -> direction = RIGHT.get(direction);
             }
-            visited.add(position);
         }
     }
 
@@ -58,10 +57,14 @@ public class SeaProbeService {
         int dy = forward ? move[1] : -move[1];
         Position next = position.move(dx, dy);
 
+        visited.add(new Position(next.getX(), next.getY()));
+
         if (grid.isInside(next) && !grid.isObstacle(next)) {
-            position = next;
+            position = new Position(next.getX(), next.getY());
         }
     }
+
+
 
     public Position getPosition() { return position; }
     public Direction getDirection() { return direction; }
