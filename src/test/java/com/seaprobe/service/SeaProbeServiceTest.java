@@ -1,5 +1,8 @@
 package com.seaprobe.service;
 
+import com.seaprobe.model.Grid;
+import com.seaprobe.model.Position;
+import com.seaprobe.model.Direction;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
