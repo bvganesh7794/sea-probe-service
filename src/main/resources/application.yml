@@ -1,0 +1,8 @@
+server:
+  port: 8080
+  servlet:
+    context-path: /sea-probe-service
+
+spring:
+  application:
+    name: sea-probe-service
